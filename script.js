@@ -5,9 +5,28 @@ function getComputerChoice(){
     return choices[i]
 }
 
-function playRound(playerSelection, computerSelection){
+function playRound(playerSelection="", computerSelection=""){
     // plays a single round
     // return a string that declares the winner
+    let won;
+    switch(playerSelection.toLowerCase()){
+        case "rock":
+            if(computerSelection === "Scissors"){
+                won = true; 
+            }
+            else if (computerSelection === "Paper"){
+                won = false;
+            }
+            break;
+        case "paper":
+            break;
+        case "scissors":
+            break;
+    } 
+
+    if(won){
+        return `You Win! ${playerSelection} beats ${computerSelection}`;
+    }
     return computerSelection;
 }
 
