@@ -63,3 +63,12 @@ function getPlayerChoice(){
     }
     return choice;
 }
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        console.log(`Player uses ${button.textContent}`);
+        playRound(playerSelection=button.textContent, computerSelection=getComputerChoice())
+    })
+})
