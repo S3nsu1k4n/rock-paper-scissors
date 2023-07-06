@@ -16,4 +16,4 @@ In this project, I am creating and designing a simple implementation of "rock pa
 
 # Live Preview
 
-http://...
+https://s3nsu1k4n.github.io/rock-paper-scissors/
