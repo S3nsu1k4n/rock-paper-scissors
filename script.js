@@ -53,17 +53,6 @@ function playRound(playerSelection="", computerSelection=""){
     return won;
 }
 
-function getPlayerChoice(){
-    let choices = ["rock", "paper", "scissors"];
-    let choice = prompt("Choose Rock Paper or Scissors");
-
-    if(!choices.includes(choice.toLowerCase())){
-        console.log("Invalid input!");
-        getPlayerChoice();
-    }
-    return choice;
-}
-
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
