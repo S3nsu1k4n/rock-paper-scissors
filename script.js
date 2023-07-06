@@ -1,3 +1,5 @@
+div_results = document.querySelector("#results")
+
 function getComputerChoice(){
     // randomly return Rock, Paper or Scissors
     let choices = ["Rock", "Paper", "Scissors"];
@@ -41,13 +43,13 @@ function playRound(playerSelection="", computerSelection=""){
 
     switch(won){
         case 0:
-            console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+            div_results.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`;
             break;
         case 1:
-            console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+            div_results.textContent = `You Win! ${playerSelection} beats ${computerSelection}`;
             break;
         case 2:
-            console.log(`It's a tie! ${playerSelection} is ${computerSelection}`);
+            div_results.textContent = `It's a tie! ${playerSelection} is ${computerSelection}`;
             break;
         }
     return won;
@@ -61,3 +63,4 @@ buttons.forEach((button) => {
         playRound(playerSelection=button.textContent, computerSelection=getComputerChoice())
     })
 })
+
